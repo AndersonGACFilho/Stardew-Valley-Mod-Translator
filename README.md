@@ -1,3 +1,7 @@
+Here's the updated README with instructions on how to set the target language:
+
+---
+
 # Stardew Valley Mod Translation Tool
 
 ## Overview
@@ -44,7 +48,11 @@ You need to authenticate your Google Cloud API client. Follow these steps:
 
 Ensure your JSON file (e.g., `default.json`) is formatted correctly and contains the text you want to translate.
 
-### 2. **Run the Translation Script**
+### 2. **Set the Target Language**
+
+Update the `language` variable in the script to the desired target language code (e.g., `'es'` for Spanish, `'fr'` for French). The default is set to `'pt-BR'` (Portuguese - Brazil).
+
+### 3. **Run the Translation Script**
 
 Execute the script to translate your JSON file:
 
@@ -52,7 +60,7 @@ Execute the script to translate your JSON file:
 python translate_mods.py
 ```
 
-### 3. **Output**
+### 4. **Output**
 
 The translated JSON will be saved to a new file named `translated_file.json`.
 
@@ -69,14 +77,16 @@ from google.cloud import translate_v2 as translate
 import json
 import os
 
+language = 'pt-BR'  # Set your target language here
+
 def create_translate_client():
     return translate.Client()
 
-def translate_text(client, text, target_language='pt-BR'):
+def translate_text(client, text, target_language=language):
     response = client.translate(text, target_language=target_language)
     return response['translatedText']
 
-def translate_json(client, json_data, target_language='pt-BR'):
+def translate_json(client, json_data, target_language=language):
     for key, value in json_data.items():
         if isinstance(value, str):
             translated = translate_text(client, value, target_language)
@@ -98,7 +108,7 @@ with open('default.json', 'r', encoding='utf-8') as f:
 
 json_data = json.loads(content)
 
-translated_json = translate_json(client, json_data, target_language='pt-BR')
+translated_json = translate_json(client, json_data, target_language=language)
 
 with open('translated_file.json', 'w', encoding='utf-8') as f:
     json.dump(translated_json, f, ensure_ascii=False, indent=4)
@@ -110,3 +120,7 @@ print("Translation complete and saved to 'translated_file.json'")
 
 - **Credential Errors**: Ensure that the `GOOGLE_APPLICATION_CREDENTIALS` environment variable is set correctly and that the JSON key file is valid.
 - **Dependency Issues**: Make sure you have all required Python packages installed and updated.
+
+---
+
+Feel free to adjust the instructions as needed!
