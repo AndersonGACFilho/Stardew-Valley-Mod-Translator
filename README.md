@@ -1,7 +1,3 @@
-Here's the updated README with instructions on how to set the target language:
-
----
-
 # Stardew Valley Mod Translation Tool
 
 ## Overview
@@ -120,7 +116,3 @@ print("Translation complete and saved to 'translated_file.json'")
 
 - **Credential Errors**: Ensure that the `GOOGLE_APPLICATION_CREDENTIALS` environment variable is set correctly and that the JSON key file is valid.
 - **Dependency Issues**: Make sure you have all required Python packages installed and updated.
-
----
-
-Feel free to adjust the instructions as needed!
