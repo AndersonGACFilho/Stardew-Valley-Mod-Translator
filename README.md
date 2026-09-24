@@ -1,5 +1,13 @@
 # Stardew Valley Mod Translation Tool
 
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![Google Cloud Translation](https://img.shields.io/badge/API-Cloud%20Translation-4285F4.svg?logo=googlecloud&logoColor=white)](https://cloud.google.com/translate)
+[![Format: JSON](https://img.shields.io/badge/format-JSON-000000.svg?logo=json&logoColor=white)](https://www.json.org/)
+[![Stardew Valley](https://img.shields.io/badge/for-Stardew%20Valley%20mods-6B8E23.svg)](https://www.stardewvalley.net/)
+[![Single file](https://img.shields.io/badge/scope-single%20script-0A9EDC.svg)](#)
+
+
 ## Overview
 
 This tool is designed to translate JSON files using the Google Cloud Translation API. It is specifically useful for translating mods for Stardew Valley, making it easier to localize content for different languages.
